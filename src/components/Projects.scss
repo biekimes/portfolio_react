@@ -1,0 +1,123 @@
+@import '../Global.scss';
+
+.Projects {
+    background-color: lightpink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        font-size: $fontSize2;
+        position: relative;
+        top: -350px;
+        z-index: 6;
+        @include mobile{
+            top: -260px;
+        }
+    }
+
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease;
+
+       @include mobile{
+           height: 100vh;
+           flex-direction: column;
+           justify-content: center;
+       }
+
+        .container{
+            width: 100vw;            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .item{
+                width: 700px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+              
+                @include mobile{
+                    width: 90%;
+                    height: 150px;
+                    margin: 5px 0;
+                }
+                           
+                    .left{
+                        flex: 8;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 80%;
+                        overflow: hidden;
+                        .leftContainer{
+                            overflow: hidden;
+                            img{
+                                overflow: hidden;
+                                width: 500px;
+                                @include mobile{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                      
+                    }
+                    .right{
+                        flex: 4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 80%;
+                       .rightContainer{
+                            width: 90%;
+                           height: 70%;
+                           display: flex;
+                           flex-direction: column;
+                           justify-content: space-around;
+                           
+                        @include mobile{
+                            h2{
+                                font-size: $fontSizeText;
+                            }
+                            p{
+                                display: none;
+                            }
+                        }
+                                               
+                       }
+
+                    }
+                }
+            }
+    }
+
+    .arrow{
+        height: 40px;
+        position: absolute;
+        cursor: pointer;      
+
+        @include mobile{
+            display: none;
+        }
+        &.left{
+            left: 100px;
+            transform: rotate(90deg);
+          
+        }
+
+        &.right{
+            right: 100px;
+            transform: rotate(-90deg);
+        }
+    }
+
+}

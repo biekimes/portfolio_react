@@ -1,0 +1,15 @@
+$mainColor : rgb(44, 21, 197);
+
+$fontSize1: 60px;
+$fontSize2: 40px;
+$fontSize3: 20px;
+$fontSizeText: 16px;
+
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}

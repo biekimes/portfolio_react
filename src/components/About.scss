@@ -1,0 +1,94 @@
+@import "../Global.scss";
+
+.About{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    .aboutMe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 20px;
+
+        p{
+            width: 80%;
+            font-size: inherit;
+            margin-bottom: 5px;
+
+            span {
+                font-weight: 700;
+                color: $mainColor;
+            }
+
+            @include mobile{
+                font-size: $fontSizeText;
+            }
+        }
+    }
+
+    .techStack{
+        padding: 10px;
+       display: flex;
+        flex-direction: column;       
+        justify-content: center; 
+        align-items: flex-start;
+        text-align: center;
+        // border: 1px solid $mainColor;
+        // border-radius: 10px;
+        
+
+        @include mobile {
+            justify-content: start; 
+            align-items: flex-start;
+            padding: 5px;
+            margin: 5px;
+           
+        }
+
+        h2{
+            margin-bottom: 10px;
+            @include mobile{
+                font-size: $fontSizeText;
+            }
+        }
+
+        h3{
+            @include mobile{
+                font-size: $fontSizeText;
+            }
+        }
+
+        ul{
+            list-style: none;       
+            margin: 10px 0;
+
+            @include mobile{
+                margin: 5px 0;
+            }
+           li{
+              display: inline-block;
+               margin: 10px;
+            //    text-align: center;
+              
+               img{
+                   display: inline-block;
+                   width: 40px;
+
+                   @include mobile{
+                    width: 20px;
+                   }
+               }
+
+
+               
+           }
+        }
+    }
+
+}
